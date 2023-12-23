@@ -5,6 +5,7 @@ def bisection(lower_bound, upper_bound, err_expected, max_iteration):
     :param upper_bound: upper bound of the interval in which the root lies
     :param err_expected: expected error in percentage
     :param max_iteration: maximum number of iterations allowed
+    :return: root of the equation
     """
     for i in range(max_iteration):
         mid = (lower_bound + upper_bound) / 2
