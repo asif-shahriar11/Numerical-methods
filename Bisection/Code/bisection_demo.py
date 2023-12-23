@@ -21,7 +21,9 @@ def bisection_demo(lower_bound, upper_bound, err_expected, max_iteration):
             continue # first iteration
 
         err = abs((mid - mid_old) / mid) * 100
-        if err <= err_expected: return mid
+        if err <= err_expected: 
+            print("{:^9d}".format(i+1), "\t\t","{:^23f}".format(mid_old) , "\t", "{:^20f}".format(mid), "\t\t","{:^21f}".format(err))
+            return mid
         else:
             print("{:^9d}".format(i+1), "\t\t","{:^23f}".format(mid_old) , "\t", "{:^20f}".format(mid), "\t\t","{:^21f}".format(err))
             mid_old = mid
@@ -32,8 +34,8 @@ def bisection_demo(lower_bound, upper_bound, err_expected, max_iteration):
 
 def main():
     "main function"
-    lower_bound = 0.0 # lower bound of the interval in which the root lies
-    upper_bound = 0.4 # upper bound of the interval in which the root lies
+    lower_bound = 0.0 # lower bound of the interval in which the root lies - found by plotting the graph
+    upper_bound = 0.4 # upper bound of the interval in which the root lies - found by plotting the graph
     err_expected = 0.5 # expected error in percentage
     max_iteration = 20 # maximum number of iterations allowed
 
