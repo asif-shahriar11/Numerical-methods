@@ -1,6 +1,10 @@
 def bisection(lower_bound, upper_bound, err_expected, max_iteration):
     """
     function to find the root of an equation using bi-section method
+    :param lower_bound: lower bound of the interval in which the root lies
+    :param upper_bound: upper bound of the interval in which the root lies
+    :param err_expected: expected error in percentage
+    :param max_iteration: maximum number of iterations allowed
     """
     for i in range(max_iteration):
         mid = (lower_bound + upper_bound) / 2
